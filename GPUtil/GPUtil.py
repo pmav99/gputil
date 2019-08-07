@@ -135,8 +135,6 @@ def getGPUs():
 def getGPUProcesses():
     """Get all gpu compute processes."""
 
-    global gpuUuidToIdMap
-
     nvidia_smi = getNvidiaSmiCmd()
     try:
         p = Popen([nvidia_smi,"--query-compute-apps=pid,process_name,gpu_uuid,gpu_name,used_memory", "--format=csv,noheader,nounits"], stdout=PIPE)
