@@ -247,8 +247,7 @@ def getFirstAvailable(order = 'first', maxLoad=0.5, maxMemory=0.5, attempts=1, i
     return available
 
 
-def showUtilization(all=False, attrList=None):
-    GPUs = getGPUs()
+def _getAttrList(all=False):
     if (all):
         attrList = [[{'attr':'id','name':'ID'},
                         {'attr':'name','name':'Name'},
@@ -268,7 +267,11 @@ def showUtilization(all=False, attrList=None):
                         {'attr':'load','name':'GPU','suffix':'%','transform': lambda x: x*100,'precision':0},
                         {'attr':'memoryUtil','name':'MEM','suffix':'%','transform': lambda x: x*100,'precision':0}],
                     ]
+    return attrList
 
+def showUtilization(all=False, attrList=None):
+    GPUs = getGPUs()
+    attrList = _getAttrList()
     headerString = ''
     GPUstrings = ['']*len(GPUs)
     for attrGroup in attrList:
