@@ -274,14 +274,14 @@ I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library
 I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
 I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
 Device: /gpu:0
-I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties:
 name: TITAN X (Pascal)
 major: 6 minor: 1 memoryClockRate (GHz) 1.531
 pciBusID 0000:02:00.0
 Total memory: 11.90GiB
 Free memory: 11.76GiB
-I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 
-I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y
 I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: TITAN X (Pascal), pci bus id: 0000:02:00.0)
 a+b=42
 
@@ -297,28 +297,28 @@ I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library
 I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
 I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
 Device: /gpu:0
-I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties:
 name: TITAN X (Pascal)
 major: 6 minor: 1 memoryClockRate (GHz) 1.531
 pciBusID 0000:02:00.0
 Total memory: 11.90GiB
 Free memory: 11.76GiB
 W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x2c8e400
-I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties:
 name: TITAN X (Pascal)
 major: 6 minor: 1 memoryClockRate (GHz) 1.531
 pciBusID 0000:03:00.0
 Total memory: 11.90GiB
 Free memory: 11.76GiB
 W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x2c92040
-I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties:
 name: TITAN X (Pascal)
 major: 6 minor: 1 memoryClockRate (GHz) 1.531
 pciBusID 0000:83:00.0
 Total memory: 11.90GiB
 Free memory: 11.76GiB
 W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x2c95d90
-I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 3 with properties: 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 3 with properties:
 name: TITAN X (Pascal)
 major: 6 minor: 1 memoryClockRate (GHz) 1.531
 pciBusID 0000:84:00.0
@@ -332,11 +332,11 @@ I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supporte
 I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
 I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 3 and 0
 I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 3 and 1
-I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 3 
-I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N N 
-I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N N 
-I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y Y 
-I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 3:   N N Y Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N N
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N N
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y Y
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 3:   N N Y Y
 I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: TITAN X (Pascal), pci bus id: 0000:02:00.0)
 I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: TITAN X (Pascal), pci bus id: 0000:03:00.0)
 I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: TITAN X (Pascal), pci bus id: 0000:83:00.0)
@@ -365,7 +365,7 @@ class Monitor(Thread):
 
     def stop(self):
         self.stopped = True
-        
+
 # Instantiate monitor with a 10-second delay between updates
 monitor = Monitor(10)
 
