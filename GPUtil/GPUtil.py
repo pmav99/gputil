@@ -353,12 +353,13 @@ def showUtilization(all=False, attrList=None, useOldCode=False):
 
 
 # Generate gpu uuid to id map
-gpuUuidToIdMap = {}
-try:
-    gpus = getGPUs()
-    for gpu in gpus:
-        gpuUuidToIdMap[gpu.uuid] = gpu.id
-    del gpus
-except:
-    pass
+def _populateGpuUuidToIdMap():
 
+    try:
+        gpu_map = {gpu.uuid: gpu.id for gpu in getGPUs()}
+    except:
+        raise ValueError("Something went wrong while parsing the nvidia-smi output")
+    return gpu_map
+
+
+gpuUuidToIdMap = _populateGpuUuidToIdMap()
