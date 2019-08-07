@@ -263,7 +263,7 @@ def showUtilization(all=False, attrList=None, useOldCode=False):
                          {'attr':'serial','name':'Serial'},
                          {'attr':'uuid','name':'UUID'}],
                         [{'attr':'temperature','name':'GPU temp.','suffix':'C','transform': lambda x: x,'precision':0},
-						 {'attr':'load','name':'GPU util.','suffix':'%','transform': lambda x: x*100,'precision':0},
+                         {'attr':'load','name':'GPU util.','suffix':'%','transform': lambda x: x*100,'precision':0},
                          {'attr':'memoryUtil','name':'Memory util.','suffix':'%','transform': lambda x: x*100,'precision':0}],
                         [{'attr':'memoryTotal','name':'Memory total','suffix':'MB','precision':0},
                          {'attr':'memoryUsed','name':'Memory used','suffix':'MB','precision':0},
