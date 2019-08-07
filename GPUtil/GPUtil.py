@@ -58,7 +58,7 @@ class GPU:
         self.display_active = display_active
         self.temperature = temp_gpu
 
-    def __str__(self):
+    def __repr__(self):
         return str(self.__dict__)
 
 
@@ -71,7 +71,7 @@ class GPUProcess:
         self.gpuName = gpuName
         self.usedMemory = usedMemory
 
-    def __str__(self):
+    def __repr__(self):
         return str(self.__dict__)
 
 def safeFloatCast(strNumber):
