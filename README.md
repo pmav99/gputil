@@ -189,22 +189,6 @@ GPUs = GPUtil.getGPUs()
 * Outputs
   * `GPUs` - list of all GPUs. Each `GPU` corresponds to one GPU in the computer and contains a device id, relative load and relative memory usage.
 
-```python
-GPUavailability = GPUtil.getAvailability(GPUs, maxLoad = 0.5, maxMemory = 0.5, includeNan=False, excludeID=[], excludeUUID=[])
-```
-Given a list of `GPUs` (see `GPUtil.getGPUs()`), return a equally sized list of ones and zeroes indicating which corresponding GPUs are available.
-
-* Inputs
-  * `GPUs` - List of `GPUs`. See `GPUtil.getGPUs()`
-  * `maxLoad` - Maximum current relative load for a GPU to be considered available. GPUs with a load larger than `maxLoad` is not returned. (**default = 0.5**)
-  * `maxMemory` - Maximum current relative memory usage for a GPU to be considered available. GPUs with a current memory usage larger than `maxMemory` is not returned. (**default = 0.5**)
-  * `includeNan` - See the description for `GPUtil.getAvailable(...)`. (**default = False**)
-  * `excludeID` - See the description for `GPUtil.getAvailable(...)`. (**default = []**)
-  * `excludeUUID` - See the description for `GPUtil.getAvailable(...)`. (**default = []**)
-* Outputs
-  * GPUavailability - binary list indicating if `GPUs` are available or not. A GPU is considered available, if the current load and memory usage is less than `maxLoad` and `maxMemory`, respectively.
-
-
 See [demo_GPUtil.py](https://github.com/anderskm/gputil/blob/master/demo_GPUtil.py) for examples and more details.
 
 ## Examples
